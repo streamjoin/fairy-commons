@@ -1,0 +1,12 @@
+# Project files
+*.sublime-workspace
+
+# Temporary files from vim
+*.swp
+
+# Customized configurations
+*.conf
+!*.default
+
+# OS generated
+*.DS_Store
