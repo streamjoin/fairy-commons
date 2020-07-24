@@ -13,8 +13,8 @@ $ git clone https://github.com/streamjoin/fairy-commons.git
 **Step-2:** Add `bin/` to the system `PATH` by adding the following lines to `~/.bashrc` or `~/.bash_profile`. 
 
 ```bash
-# Fairy
-export FAIRY_COMMONS_HOME="/path/to/fairy"
+# Fairy-commons
+export FAIRY_COMMONS_HOME="/path/to/fairy-commons"
 export PATH="${FAIRY_COMMONS_HOME}/bin:${PATH}"
 ```
 
