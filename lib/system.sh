@@ -40,6 +40,14 @@ os_type() {
   echo "${os_name}"
 }
 
+linux_distr_name() {
+  awk -F= '/^ID=/{print $2}' "/etc/os-release"
+}
+
+linux_distr_version() {
+  awk -F= '/^VERSION_ID=/{print $2}' "/etc/os-release" | sed 's/"//g'
+}
+
 arg_find_e() {
   case $(os_type) in
     "Mac") arg="-E" ;;
