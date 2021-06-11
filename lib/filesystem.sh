@@ -22,6 +22,13 @@ delete_dir() {
   check_err "Failed to delete directory '$1'"
 }
 
+delete_all_dir() {
+  [[ "$#" -eq 2 ]] ||
+  check_err "Wrong number of parameters to 'delete_all_dir()'"
+
+  find "$1" -type d -name "$2" | xargs rm -rf
+}
+
 try_delete_empty_dir() {
   rmdir --ignore-fail-on-non-empty "$1" ||
   warn "Failed to delete directory '$1': Permission denied"
